@@ -1,0 +1,387 @@
+/* ============================================
+   music-styles.css — From-Scratch Stylesheet
+   Alternative Rock Page Custom Styles
+   ============================================ */
+
+/* --- CSS Variables --- */
+:root {
+  --bg: #0e0c0c;
+  --bg2: #151213;
+  --bg3: #1d191a;
+  --accent: #c0392b;
+  --accent2: #e8854a;
+  --accent3: #a89080;
+  --text: #f2ede8;
+  --text-muted: #7a7270;
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-body: 'Crimson Pro', Georgia, serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+}
+
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ============================
+   DIV 1: HERO / HEADER SECTION
+   ============================ */
+.div-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 8vw 80px;
+  position: relative;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(to bottom, rgba(14,12,12,0.15) 0%, rgba(14,12,12,0.80) 65%, rgba(14,12,12,1) 100%),
+    url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1600&q=80&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 30%;
+}
+
+/* ============================
+   DIV 2: MAIN CONTENT WRAPPER
+   ============================ */
+.div-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 8vw;
+}
+
+/* ============================
+   DIV 3: QUOTE / FEATURE CARDS
+   ============================ */
+.div-card {
+  background-color: var(--bg2);
+  border: 1px solid rgba(242, 237, 232, 0.07);
+  border-left: 3px solid var(--accent);
+  padding: 28px 32px;
+  margin: 32px 0;
+}
+
+.div-card blockquote {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--accent3);
+  margin: 12px 0 0;
+  line-height: 1.6;
+}
+
+/* --- Navigation --- */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 8vw;
+  background: rgba(14, 12, 12, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(192, 57, 43, 0.3);
+}
+
+nav .nav-brand {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav ul li a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* --- Typography --- */
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 14vw, 11rem);
+  font-weight: 400;
+  line-height: 0.92;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+h1 .red {
+  color: var(--accent);
+  display: block;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* --- Sections --- */
+section {
+  padding: 80px 8vw;
+}
+
+section:nth-child(even) {
+  background-color: var(--bg2);
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 44px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(242, 237, 232, 0.07);
+}
+
+/* --- Band list: ordered with nested unordered --- */
+ol.band-list {
+  list-style: none;
+  counter-reset: band-counter;
+  margin: 32px 0;
+}
+
+ol.band-list > li {
+  counter-increment: band-counter;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(242, 237, 232, 0.06);
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+ol.band-list > li::before {
+  content: counter(band-counter, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: rgba(192, 57, 43, 0.3);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.band-name {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.band-desc {
+  color: var(--text-muted);
+  font-size: 0.96rem;
+  margin-bottom: 12px;
+}
+
+/* Unordered list of albums nested inside each band list item */
+ul.albums {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+ul.albums li {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--accent2);
+  background: rgba(232, 133, 74, 0.08);
+  border: 1px solid rgba(232, 133, 74, 0.2);
+  padding: 4px 10px;
+}
+
+/* --- Image styles --- */
+.img-full {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(25%) contrast(1.08);
+}
+
+.img-caption {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.img-block {
+  margin: 44px 0;
+}
+
+/* --- YouTube video embed --- */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 40px 0;
+  background: var(--bg3);
+  border-left: 3px solid var(--accent);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- Tableau embed --- */
+.tableau-wrapper {
+  margin: 40px 0;
+  min-height: 520px;
+  background: var(--bg3);
+  overflow: hidden;
+}
+
+/* --- Anchor & utility links --- */
+.anchor-link {
+  display: inline-block;
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(192, 57, 43, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.anchor-link:hover {
+  color: var(--text);
+  border-color: rgba(242, 237, 232, 0.4);
+}
+
+/* --- Back navigation buttons --- */
+.back-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.back-nav a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid rgba(242, 237, 232, 0.1);
+  padding: 9px 18px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.back-nav a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --- Footer --- */
+footer {
+  padding: 44px 8vw;
+  border-top: 1px solid rgba(192, 57, 43, 0.2);
+  text-align: center;
+}
+
+footer p {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin: 0 auto;
+}
+
+/* --- Utility classes --- */
+hr {
+  border: none;
+  border-top: 1px solid rgba(242, 237, 232, 0.07);
+  margin: 48px 0;
+}
+
+.highlight  { color: var(--accent); }
+.highlight2 { color: var(--accent2); }
+.muted {
+  color: var(--text-muted);
+  font-size: 0.85em;
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+}
