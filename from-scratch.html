@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alternative Rock — A Passion Page</title>
+
+  <!-- Google Fonts: Bebas Neue (display) + Crimson Pro (body) + Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- From-scratch stylesheet (requirement) -->
+  <link rel="stylesheet" href="music-styles.css" />
+
+  <!-- Tableau Embedding API v3 -->
+ <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav>
+    <a class="nav-brand" href="#top">Web dev project: ALT ROCK</a>
+    <ul>
+      <li><a href="#bands">Bands</a></li>
+      <li><a href="#watch">Watch</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="index.html">← Main Site</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <!-- On-page anchor: #top -->
+  <div class="div-hero" id="top">
+    <span class="hero-tagline">A Passion Page — From Scratch</span>
+    <h1>
+      Loud.
+      <span class="red">Distorted.</span>
+      Real.
+    </h1>
+    <p>
+      Alternative rock isn't a sound — it's an attitude. From Seattle basements to sold-out arenas,
+      these are the bands that proved guitar music could still mean something.
+    </p>
+    <!-- On-page anchor link -->
+    <a class="anchor-link" href="#bands">↓ The Bands</a>
+  </div>
+
+
+  <!-- ===================== BANDS SECTION ===================== -->
+  <section id="bands">
+    <p class="section-label">Section 01 — The Bands</p>
+    <h2>Essential Artists</h2>
+    <p>
+      Six bands. Six reasons alternative rock still matters. Each one changed something —
+      a sound, a scene, or the entire direction of popular music.
+    </p>
+
+    <!--
+      REQUIREMENT: Ordered list with unordered lists embedded inside.
+      Each band is a numbered item; their essential albums are an unordered
+      sub-list inside that item.
+    -->
+    <ol class="band-list">
+
+      <li>
+        <div>
+          <div class="band-name">Nirvana</div>
+          <p class="band-desc">
+            The band that dragged alternative rock into the mainstream — and burned out before the
+            industry could fully absorb them. Kurt Cobain's songwriting was deceptively simple on the
+            surface and genuinely anguished underneath.
+          </p>
+          <!-- Unordered list nested inside the ordered list -->
+          <ul class="albums">
+            <li>Bleach (1989)</li>
+            <li>Nevermind (1991)</li>
+            <li>In Utero (1993)</li>
+            <li>MTV Unplugged in New York (1994)</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="band-name">The Strokes</div>
+          <p class="band-desc">
+            Five kids from Manhattan who made garage rock sound cool again in 2001 when nobody thought
+            it could be. <em>Is This It</em> is one of the most perfectly sequenced albums ever made.
+          </p>
+          <ul class="albums">
+            <li>Is This It (2001)</li>
+            <li>Room on Fire (2003)</li>
+            <li>First Impressions of Earth (2006)</li>
+            <li>The New Abnormal (2020)</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="band-name">The Killers</div>
+          <p class="band-desc">
+            Las Vegas new wave shot through with heartland rock ambition. Brandon Flowers writes songs
+            that feel cinematic even when they're about nothing in particular — which is somehow exactly
+            the point.
+          </p>
+          <ul class="albums">
+            <li>Hot Fuss (2004)</li>
+            <li>Sam's Town (2006)</li>
+            <li>Battle Born (2012)</li>
+            <li>Imploding the Mirage (2020)</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="band-name">Cage the Elephant</div>
+          <p class="band-desc">
+            Bowling Green, Kentucky's most chaotic export. Their live shows are legendary — Matt Shultz
+            climbs things, falls off things, and somehow keeps singing. Their records balance noise and
+            melody better than almost anyone working today.
+          </p>
+          <ul class="albums">
+            <li>Cage the Elephant (2008)</li>
+            <li>Thank You, Happy Birthday (2011)</li>
+            <li>Melophobia (2013)</li>
+            <li>Tell Me I'm Pretty (2015)</li>
+            <li>Social Cues (2019)</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="band-name">Deftones</div>
+          <p class="band-desc">
+            Sacramento's finest. Where most of their peers aged out of heaviness, Deftones leaned into
+            texture and atmosphere and got better with every record. <em>White Pony</em> remains one
+            of alternative metal's defining statements.
+          </p>
+          <ul class="albums">
+            <li>Adrenaline (1995)</li>
+            <li>Around the Fur (1997)</li>
+            <li>White Pony (2000)</li>
+            <li>Diamond Eyes (2010)</li>
+            <li>Ohms (2020)</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="band-name">Smashing Pumpkins</div>
+          <p class="band-desc">
+            Billy Corgan's grandiose ambition produced one of the 90s most towering achievements in
+            <em>Mellon Collie and the Infinite Sadness</em> — a 28-track double album that somehow
+            never overstays its welcome.
+          </p>
+          <ul class="albums">
+            <li>Gish (1991)</li>
+            <li>Siamese Dream (1993)</li>
+            <li>Mellon Collie and the Infinite Sadness (1995)</li>
+            <li>Adore (1998)</li>
+            <li>Machina (2000)</li>
+          </ul>
+        </div>
+      </li>
+
+    </ol>
+
+    <a class="anchor-link" href="#top">↑ Back to top</a>
+  </section>
+
+
+  <!-- ===================== WATCH / VIDEO SECTION ===================== -->
+  <section id="watch">
+    <p class="section-label">Section 02 — Watch</p>
+    <h2>Live &amp; Loud</h2>
+
+    <p>
+      Alternative rock is best understood through its live performances. The controlled chaos, the
+      crowd energy, the moments where the song falls apart and comes back together — none of that
+      survives on a studio record the way it does in a room.
+    </p>
+
+    <!-- REQUIREMENT: Image not from Bootstrap theme -->
+    <div class="img-block">
+      <img
+        class="img-full"
+        src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80&auto=format&fit=crop"
+        alt="Electric guitar player performing on a dark stage with dramatic lighting"
+      />
+      <p class="img-caption">The guitar as instrument and weapon — alt rock's defining image.</p>
+    </div>
+
+    <!-- Feature quote card (div-card) -->
+    <div class="div-card">
+      <h3>On the Energy of Alt Rock</h3>
+      <p>
+        The best alternative bands understood that volume isn't just loudness — it's pressure. When
+        Nirvana went from the quiet verse to the explosive chorus of "Smells Like Teen Spirit," they
+        weren't just playing louder. They were using dynamics as an emotional weapon.
+      </p>
+      <blockquote>
+        "I'd rather be hated for who I am, than loved for who I am not." — Kurt Cobain
+      </blockquote>
+    </div>
+
+    <!-- REQUIREMENT: Embedded YouTube video -->
+    <!--
+      YouTube embed works by replacing the standard watch URL
+      (https://www.youtube.com/watch?v=VIDEO_ID) with the embed URL
+      (https://www.youtube.com/embed/VIDEO_ID) inside an iframe.
+      The 16:9 aspect ratio is maintained using the padding-bottom: 56.25% trick.
+      NOTE: This will not display when opened as a local file (file://) —
+      it requires an internet connection and works once hosted online.
+    -->
+    <h3 style="margin-top: 48px;">Nirvana — Smells Like Teen Spirit (Official)</h3>
+    <p>The music video that changed everything. Directed by Samuel Bayer, 1991.</p>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/hTWKbfoikeg"
+        title="Nirvana - Smells Like Teen Spirit (Official Music Video)"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <p class="muted">
+      ↑ Video requires an internet connection. Will not play when opened as a local file —
+      works correctly once hosted on GitHub Pages or any web server.
+    </p>
+
+    <!-- Second image -->
+    <div class="img-block">
+      <img
+        class="img-full"
+        src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1200&q=80&auto=format&fit=crop"
+        alt="Concert crowd with hands raised, stage lights overhead"
+      />
+      <p class="img-caption">The crowd is half the performance. Alt rock knew this.</p>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== DATA / TABLEAU ===================== -->
+  <section id="data">
+    <p class="section-label">Section 03 — Data</p>
+    <h2>By the Numbers</h2>
+    <p>
+      The interactive Tableau visualization below explores music streaming data — genre trends,
+      listening habits, and how alternative rock has held its ground in the streaming era.
+      Use the filters inside to explore different breakdowns.
+    </p>
+
+    <!--
+      REQUIREMENT: Live, interactive embedded Tableau graph.
+      Uses Tableau Embedding API v3 web component syntax.
+      To replace with your own viz: go to Tableau Public, find a visualization,
+      click Share > Copy Embed Code, and paste the src URL into the tag below.
+    -->
+    <div class="tableau-wrapper">
+  <tableau-viz
+    id="tableauViz"
+    src="https://public.tableau.com/views/StreamingonSpotify_16041166318130/StreamingonSpotifyoverlastfivemonths"
+    width="100%"
+    height="520"
+    hide-tabs
+    toolbar="bottom"
+  ></tableau-viz>
+</div>
+
+    <p class="muted">
+      ↑ Live interactive Tableau visualization. Click and filter to explore.
+      To swap in a different viz, replace the src URL with any Tableau Public embed link.
+    </p>
+  </section>
+
+
+  <!-- ===================== CLOSING CONTENT DIV ===================== -->
+  <div class="div-content">
+    <h3>Why It Still Matters</h3>
+    <hr />
+    <p>
+      Alternative rock at its peak did something rare: it made alienation feel communal.
+      The kids who didn't fit in found each other through these records. That function hasn't
+      disappeared — it's just moved to different formats and different bands.
+    </p>
+    <p>
+      The bands on this page are worth knowing not just as historical artifacts but as active
+      proof that guitar music with something to say still connects. Cage the Elephant and
+      the Deftones are still releasing some of the best rock records anyone is making. The
+      genre isn't dead. It just stopped caring whether you thought so.
+    </p>
+    <hr />
+
+    <!-- REQUIREMENT: Navigation back to professional pages -->
+    <h3>Navigation</h3>
+    <p>Head back to the main site or check out the web app.</p>
+    <div class="back-nav">
+      <a href="index.html">← Professional Home</a>
+      <a href="resume.html">← Résumé</a>
+      <a href="app.html">Web App →</a>
+      <a href="#top">↑ Top of Page</a>
+    </div>
+  </div>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>Built from scratch — HTML &amp; CSS only, no frameworks &nbsp;|&nbsp; Hosted on GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
